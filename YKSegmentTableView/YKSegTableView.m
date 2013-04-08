@@ -8,10 +8,14 @@
 
 #import "YKSegTableView.h"
 
-@interface YKSegTableView()<UITableViewDataSource,UITableViewDelegate>
+@interface YKSegTableView()<UITableViewDataSource,UITableViewDelegate>{
+}
 @property (nonatomic, strong) UITableView *interTable;
 @property (assign) CGRect orgFrame;
 @property (nonatomic, strong) UIView *segView;
+@property (nonatomic, strong) NSMutableDictionary *offPoints;
+@property (assign) int currentShow;
+@property (assign) int oldShow;
 
 @end
 
@@ -22,9 +26,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         _orgFrame = frame;
+        self.offPoints = [NSMutableDictionary new];
+        for (int i=0; i<[self.dataSource numberOfColoms]; i++) {
+            [self.offPoints setValue:[NSValue valueWithCGPoint:CGPointZero] forKey:[NSString stringWithFormat:@"%d",i]];
+        }
+        _currentShow = NSNotFound;
+        _oldShow = NSNotFound;
         self.backgroundColor = [UIColor whiteColor];
 
-        [self reloadData];
         // Initialization code
     }
     return self;
@@ -34,9 +43,17 @@
         [_segView removeFromSuperview];
     }
     self.segView = [self.dataSource segmentView];
+    _currentShow = [self.dataSource showWhichOne];
+    CGPoint tooldOff = self.interTable.contentOffset;
+    if (_oldShow!=NSNotFound) {
+        [self.offPoints setValue:[NSValue valueWithCGPoint:tooldOff] forKey:[NSString stringWithFormat:@"%d",_oldShow]];
+    }
     [self addSubview:_segView];
     [self.interTable reloadData];
-    [self.interTable setContentOffset:CGPointMake(0, 0) animated:NO];
+    _oldShow = _currentShow;
+    CGPoint current = [[self.offPoints valueForKey:[NSString stringWithFormat:@"%d",_currentShow]] CGPointValue];
+    
+    [self.interTable setContentOffset:current animated:NO];
 }
 - (UITableView*)interTable{
     if (!_interTable) {

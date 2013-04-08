@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol YKSegTableViewDataSource<NSObject>
-
+- (int)numberOfColoms;
 - (NSArray *)itemsForColom:(int)_colom;
 - (UIView *)segmentView;
 - (int)showWhichOne;

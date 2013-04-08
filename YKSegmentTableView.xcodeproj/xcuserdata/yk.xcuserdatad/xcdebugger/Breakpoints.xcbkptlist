@@ -17,20 +17,20 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "YKSegmentTableView/YKSegTableView.m"
-         timestampString = "387105650.622233"
+         timestampString = "387107497.333384"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
          landmarkName = "-tableView:numberOfRowsInSection:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "YKSegmentTableView/YKViewController.m"
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "YKSegmentTableView/YKSegTableView.m"
-         timestampString = "387105414.417087"
+         timestampString = "387107497.333384"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "-reloadData"
          landmarkType = "5">
       </FileBreakpoint>
