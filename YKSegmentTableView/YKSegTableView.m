@@ -21,10 +21,12 @@
 
 @implementation YKSegTableView
 
-- (id)initWithFrame:(CGRect)frame
-{
+
+- (id)initWithFrame:(CGRect)frame andDataSource:(id<YKSegTableViewDataSource>)_source andDelegate:(id<YKSegTableViewDelegate>)_dele{
     self = [super initWithFrame:frame];
     if (self) {
+        _dataSource = _source;
+        _delegate = _dele;
         _orgFrame = frame;
         self.offPoints = [NSMutableDictionary new];
         for (int i=0; i<[self.dataSource numberOfColoms]; i++) {
@@ -33,7 +35,7 @@
         _currentShow = NSNotFound;
         _oldShow = NSNotFound;
         self.backgroundColor = [UIColor whiteColor];
-
+        [self reloadData];
         // Initialization code
     }
     return self;
@@ -57,12 +59,13 @@
 }
 - (UITableView*)interTable{
     if (!_interTable) {
-        _orgFrame.origin.y+=70;
-        _orgFrame.size.height-=70;
+        CGRect headerFrame = [self.dataSource segmentView].frame;
+        _orgFrame.origin.y+=headerFrame.size.height;
+        _orgFrame.size.height-=headerFrame.size.height;
         _interTable = [[UITableView alloc] initWithFrame:_orgFrame style:UITableViewStylePlain] ;
         _interTable.dataSource = self;
         _interTable.delegate = self;
-        _interTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _interTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [self addSubview:_interTable];
     }
     return _interTable;
@@ -97,7 +100,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    [self reloadData];
+//    [self reloadData];
     // Drawing code
 }
 

@@ -14,7 +14,13 @@
 - (int)showWhichOne;
 @end
 
+@protocol YKSegTableViewDelegate<NSObject>
+
+@end
+
 @interface YKSegTableView : UIView
 @property (weak, nonatomic) id<YKSegTableViewDataSource> dataSource;
+@property (weak, nonatomic) id<YKSegTableViewDelegate> delegate;
 -(void) reloadData;
+- (id)initWithFrame:(CGRect)frame andDataSource:(id<YKSegTableViewDataSource>)_source andDelegate:(id<YKSegTableViewDelegate>)_dele;
 @end
