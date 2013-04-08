@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5964271F1712AEA2003EE447 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964271E1712AEA2003EE447 /* UIKit.framework */; };
+		596427211712AEA2003EE447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596427201712AEA2003EE447 /* Foundation.framework */; };
+		596427231712AEA2003EE447 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596427221712AEA2003EE447 /* CoreGraphics.framework */; };
+		596427291712AEA2003EE447 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 596427271712AEA2003EE447 /* InfoPlist.strings */; };
+		5964272B1712AEA2003EE447 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5964272A1712AEA2003EE447 /* main.m */; };
+		5964272F1712AEA2003EE447 /* YKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5964272E1712AEA2003EE447 /* YKAppDelegate.m */; };
+		596427311712AEA2003EE447 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 596427301712AEA2003EE447 /* Default.png */; };
+		596427331712AEA2003EE447 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 596427321712AEA2003EE447 /* Default@2x.png */; };
+		596427351712AEA2003EE447 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 596427341712AEA2003EE447 /* Default-568h@2x.png */; };
+		596427381712AEA2003EE447 /* YKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596427371712AEA2003EE447 /* YKViewController.m */; };
+		5964273B1712AEA2003EE447 /* YKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596427391712AEA2003EE447 /* YKViewController.xib */; };
+		596427431712AEA2003EE447 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596427421712AEA2003EE447 /* SenTestingKit.framework */; };
+		596427441712AEA2003EE447 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964271E1712AEA2003EE447 /* UIKit.framework */; };
+		596427451712AEA2003EE447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596427201712AEA2003EE447 /* Foundation.framework */; };
+		5964274D1712AEA2003EE447 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5964274B1712AEA2003EE447 /* InfoPlist.strings */; };
+		596427501712AEA3003EE447 /* YKSegmentTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5964274F1712AEA3003EE447 /* YKSegmentTableViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		596427461712AEA2003EE447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 596427131712AEA2003EE447 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5964271A1712AEA2003EE447;
+			remoteInfo = YKSegmentTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5964271B1712AEA2003EE447 /* YKSegmentTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKSegmentTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5964271E1712AEA2003EE447 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		596427201712AEA2003EE447 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		596427221712AEA2003EE447 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		596427261712AEA2003EE447 /* YKSegmentTableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YKSegmentTableView-Info.plist"; sourceTree = "<group>"; };
+		596427281712AEA2003EE447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5964272A1712AEA2003EE447 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5964272C1712AEA2003EE447 /* YKSegmentTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YKSegmentTableView-Prefix.pch"; sourceTree = "<group>"; };
+		5964272D1712AEA2003EE447 /* YKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppDelegate.h; sourceTree = "<group>"; };
+		5964272E1712AEA2003EE447 /* YKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppDelegate.m; sourceTree = "<group>"; };
+		596427301712AEA2003EE447 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		596427321712AEA2003EE447 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		596427341712AEA2003EE447 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		596427361712AEA2003EE447 /* YKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKViewController.h; sourceTree = "<group>"; };
+		596427371712AEA2003EE447 /* YKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKViewController.m; sourceTree = "<group>"; };
+		5964273A1712AEA2003EE447 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YKViewController.xib; sourceTree = "<group>"; };
+		596427411712AEA2003EE447 /* YKSegmentTableViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKSegmentTableViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		596427421712AEA2003EE447 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5964274A1712AEA2003EE447 /* YKSegmentTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YKSegmentTableViewTests-Info.plist"; sourceTree = "<group>"; };
+		5964274C1712AEA2003EE447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5964274E1712AEA3003EE447 /* YKSegmentTableViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSegmentTableViewTests.h; sourceTree = "<group>"; };
+		5964274F1712AEA3003EE447 /* YKSegmentTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSegmentTableViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		596427181712AEA2003EE447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5964271F1712AEA2003EE447 /* UIKit.framework in Frameworks */,
+				596427211712AEA2003EE447 /* Foundation.framework in Frameworks */,
+				596427231712AEA2003EE447 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5964273D1712AEA2003EE447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596427431712AEA2003EE447 /* SenTestingKit.framework in Frameworks */,
+				596427441712AEA2003EE447 /* UIKit.framework in Frameworks */,
+				596427451712AEA2003EE447 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		596427121712AEA2003EE447 = {
+			isa = PBXGroup;
+			children = (
+				596427241712AEA2003EE447 /* YKSegmentTableView */,
+				596427481712AEA2003EE447 /* YKSegmentTableViewTests */,
+				5964271D1712AEA2003EE447 /* Frameworks */,
+				5964271C1712AEA2003EE447 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5964271C1712AEA2003EE447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5964271B1712AEA2003EE447 /* YKSegmentTableView.app */,
+				596427411712AEA2003EE447 /* YKSegmentTableViewTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5964271D1712AEA2003EE447 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5964271E1712AEA2003EE447 /* UIKit.framework */,
+				596427201712AEA2003EE447 /* Foundation.framework */,
+				596427221712AEA2003EE447 /* CoreGraphics.framework */,
+				596427421712AEA2003EE447 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		596427241712AEA2003EE447 /* YKSegmentTableView */ = {
+			isa = PBXGroup;
+			children = (
+				5964272D1712AEA2003EE447 /* YKAppDelegate.h */,
+				5964272E1712AEA2003EE447 /* YKAppDelegate.m */,
+				596427361712AEA2003EE447 /* YKViewController.h */,
+				596427371712AEA2003EE447 /* YKViewController.m */,
+				596427391712AEA2003EE447 /* YKViewController.xib */,
+				596427251712AEA2003EE447 /* Supporting Files */,
+			);
+			path = YKSegmentTableView;
+			sourceTree = "<group>";
+		};
+		596427251712AEA2003EE447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				596427261712AEA2003EE447 /* YKSegmentTableView-Info.plist */,
+				596427271712AEA2003EE447 /* InfoPlist.strings */,
+				5964272A1712AEA2003EE447 /* main.m */,
+				5964272C1712AEA2003EE447 /* YKSegmentTableView-Prefix.pch */,
+				596427301712AEA2003EE447 /* Default.png */,
+				596427321712AEA2003EE447 /* Default@2x.png */,
+				596427341712AEA2003EE447 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		596427481712AEA2003EE447 /* YKSegmentTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				5964274E1712AEA3003EE447 /* YKSegmentTableViewTests.h */,
+				5964274F1712AEA3003EE447 /* YKSegmentTableViewTests.m */,
+				596427491712AEA2003EE447 /* Supporting Files */,
+			);
+			path = YKSegmentTableViewTests;
+			sourceTree = "<group>";
+		};
+		596427491712AEA2003EE447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5964274A1712AEA2003EE447 /* YKSegmentTableViewTests-Info.plist */,
+				5964274B1712AEA2003EE447 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5964271A1712AEA2003EE447 /* YKSegmentTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596427531712AEA3003EE447 /* Build configuration list for PBXNativeTarget "YKSegmentTableView" */;
+			buildPhases = (
+				596427171712AEA2003EE447 /* Sources */,
+				596427181712AEA2003EE447 /* Frameworks */,
+				596427191712AEA2003EE447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKSegmentTableView;
+			productName = YKSegmentTableView;
+			productReference = 5964271B1712AEA2003EE447 /* YKSegmentTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		596427401712AEA2003EE447 /* YKSegmentTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596427561712AEA3003EE447 /* Build configuration list for PBXNativeTarget "YKSegmentTableViewTests" */;
+			buildPhases = (
+				5964273C1712AEA2003EE447 /* Sources */,
+				5964273D1712AEA2003EE447 /* Frameworks */,
+				5964273E1712AEA2003EE447 /* Resources */,
+				5964273F1712AEA2003EE447 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				596427471712AEA2003EE447 /* PBXTargetDependency */,
+			);
+			name = YKSegmentTableViewTests;
+			productName = YKSegmentTableViewTests;
+			productReference = 596427411712AEA2003EE447 /* YKSegmentTableViewTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		596427131712AEA2003EE447 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = YEK;
+			};
+			buildConfigurationList = 596427161712AEA2003EE447 /* Build configuration list for PBXProject "YKSegmentTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 596427121712AEA2003EE447;
+			productRefGroup = 5964271C1712AEA2003EE447 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5964271A1712AEA2003EE447 /* YKSegmentTableView */,
+				596427401712AEA2003EE447 /* YKSegmentTableViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		596427191712AEA2003EE447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596427291712AEA2003EE447 /* InfoPlist.strings in Resources */,
+				596427311712AEA2003EE447 /* Default.png in Resources */,
+				596427331712AEA2003EE447 /* Default@2x.png in Resources */,
+				596427351712AEA2003EE447 /* Default-568h@2x.png in Resources */,
+				5964273B1712AEA2003EE447 /* YKViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5964273E1712AEA2003EE447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5964274D1712AEA2003EE447 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5964273F1712AEA2003EE447 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		596427171712AEA2003EE447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5964272B1712AEA2003EE447 /* main.m in Sources */,
+				5964272F1712AEA2003EE447 /* YKAppDelegate.m in Sources */,
+				596427381712AEA2003EE447 /* YKViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5964273C1712AEA2003EE447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596427501712AEA3003EE447 /* YKSegmentTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		596427471712AEA2003EE447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5964271A1712AEA2003EE447 /* YKSegmentTableView */;
+			targetProxy = 596427461712AEA2003EE447 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		596427271712AEA2003EE447 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				596427281712AEA2003EE447 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		596427391712AEA2003EE447 /* YKViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5964273A1712AEA2003EE447 /* en */,
+			);
+			name = YKViewController.xib;
+			sourceTree = "<group>";
+		};
+		5964274B1712AEA2003EE447 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5964274C1712AEA2003EE447 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		596427511712AEA3003EE447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		596427521712AEA3003EE447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		596427541712AEA3003EE447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YKSegmentTableView/YKSegmentTableView-Prefix.pch";
+				INFOPLIST_FILE = "YKSegmentTableView/YKSegmentTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		596427551712AEA3003EE447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YKSegmentTableView/YKSegmentTableView-Prefix.pch";
+				INFOPLIST_FILE = "YKSegmentTableView/YKSegmentTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		596427571712AEA3003EE447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YKSegmentTableView.app/YKSegmentTableView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YKSegmentTableView/YKSegmentTableView-Prefix.pch";
+				INFOPLIST_FILE = "YKSegmentTableViewTests/YKSegmentTableViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		596427581712AEA3003EE447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YKSegmentTableView.app/YKSegmentTableView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YKSegmentTableView/YKSegmentTableView-Prefix.pch";
+				INFOPLIST_FILE = "YKSegmentTableViewTests/YKSegmentTableViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		596427161712AEA2003EE447 /* Build configuration list for PBXProject "YKSegmentTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596427511712AEA3003EE447 /* Debug */,
+				596427521712AEA3003EE447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		596427531712AEA3003EE447 /* Build configuration list for PBXNativeTarget "YKSegmentTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596427541712AEA3003EE447 /* Debug */,
+				596427551712AEA3003EE447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		596427561712AEA3003EE447 /* Build configuration list for PBXNativeTarget "YKSegmentTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596427571712AEA3003EE447 /* Debug */,
+				596427581712AEA3003EE447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 596427131712AEA2003EE447 /* Project object */;
+}
