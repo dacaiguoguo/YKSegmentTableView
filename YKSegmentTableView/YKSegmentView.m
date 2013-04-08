@@ -65,6 +65,7 @@
 - (id)initWithFrame:(CGRect)frame buttonNumber:(int)_number normalImages:(NSArray *)normals selectImages:(NSArray *)selects titles:(NSArray *)titles normalTitleColor:(UIColor*)_normalColor selectColor:(UIColor *)_selectColor selectIndex:(int)_selectIndex{
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor clearColor];
         selectedIndex=-1;
         buttonArray=[[NSMutableArray alloc] init];
         CGRect rect = frame;
@@ -78,6 +79,7 @@
             [button setBackgroundImage:[UIImage imageNamed:normals[i]] forState:UIControlStateNormal];
             [button setBackgroundImage:[UIImage imageNamed:selects[i]] forState:UIControlStateSelected];
             [button setBackgroundImage:[UIImage imageNamed:normals[i]] forState:UIControlStateHighlighted];
+            button.titleLabel.font = [UIFont systemFontOfSize:14];
             button.frame = CGRectMake(i*width, 0, width, rect.size.height);
             [button addTarget:self action:@selector(onButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 			[buttonArray addObject:button];

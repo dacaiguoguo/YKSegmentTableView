@@ -34,7 +34,7 @@
         }
         _currentShow = NSNotFound;
         _oldShow = NSNotFound;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         [self reloadData];
         // Initialization code
     }
@@ -60,16 +60,19 @@
 - (UITableView*)interTable{
     if (!_interTable) {
         CGRect headerFrame = [self.dataSource segmentView].frame;
-        _orgFrame.origin.y+=headerFrame.size.height;
+        _orgFrame.origin.y =headerFrame.size.height;
         _orgFrame.size.height-=headerFrame.size.height;
         _interTable = [[UITableView alloc] initWithFrame:_orgFrame style:UITableViewStylePlain] ;
         _interTable.dataSource = self;
         _interTable.delegate = self;
+        _interTable.backgroundView = nil;
+        _interTable.backgroundColor = [UIColor clearColor];
         _interTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [self addSubview:_interTable];
     }
     return _interTable;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
@@ -79,10 +82,20 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [self.dataSource buttomView];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.delegate didSelectIndex:indexPath];
+}
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.dataSource itemsForColom:[self.dataSource showWhichOne]].count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return [self.dataSource heightForFooterView];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *idfi = @"YKTableViewCellForGategory";

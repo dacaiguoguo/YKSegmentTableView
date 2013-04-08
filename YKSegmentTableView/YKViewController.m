@@ -15,18 +15,35 @@
 @end
 
 @implementation YKViewController
+
+- (void)didSelectIndex:(NSIndexPath*)_indexPath{
+    
+}
 - (int)numberOfColoms{
     return 2;
+}
+- (int)heightForFooterView{
+    return 50;
+}
+- (UIView *)buttomView{
+    UIView *ret = nil;
+    ret = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [clearButton setFrame:CGRectInset(ret.bounds, 10, 8)];
+    [clearButton setBackgroundColor:[UIColor orangeColor]];
+    [clearButton setTitle:@"清空历史记录" forState:UIControlStateNormal];
+    [ret addSubview:clearButton];
+    return ret;
 }
 - (UIView *)segmentView{
 //    return nil;
     if (!_segView) {
-        self.segView =  [[YKSegmentView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)
+        self.segView =  [[YKSegmentView alloc] initWithFrame:CGRectMake(34, 0, 252, 39)
                                                 buttonNumber:2
                                                 normalImages:@[@"btn_left_normal.png",@"btn_right_normal.png"]
                                                 selectImages:@[@"btn_left_selected.png",@"btn_right_selected.png"]
-                                                      titles:@[@"haha",@"huhu"]
-                                            normalTitleColor:[UIColor blueColor] selectColor:[UIColor whiteColor]
+                                                      titles:@[@"热门推荐",@"搜索历史"]
+                                            normalTitleColor:[YKColor getColor:@"707070"] selectColor:[UIColor whiteColor]
                                                  selectIndex:0];
         [_segView addTarget:self action:@selector(reloadDataSeg:) forControlEvents:UIControlEventValueChanged];
 
@@ -48,15 +65,41 @@
 - (void)reloadDataSeg:(YKSegmentView*)segs{
     [self.seg reloadData];
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"ss:%d",indexPath.row);
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.seg = [[YKSegTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 400) andDataSource:self andDelegate:self];
-    _seg.dataSource = self;
+    self.seg = [[YKSegTableView alloc] initWithFrame:CGRectMake(0, 108, 320, 548-108) andDataSource:self andDelegate:self];
     [self.view addSubview:_seg];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 70;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+- (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *idfi = @"YKTableViewCellForGategory";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idfi];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idfi];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
+    return cell;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

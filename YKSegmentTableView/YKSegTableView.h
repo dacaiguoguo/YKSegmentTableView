@@ -12,10 +12,12 @@
 - (NSArray *)itemsForColom:(int)_colom;
 - (UIView *)segmentView;
 - (int)showWhichOne;
+- (UIView *)buttomView;
+- (int)heightForFooterView;
 @end
 
 @protocol YKSegTableViewDelegate<NSObject>
-
+- (void)didSelectIndex:(NSIndexPath*)_indexPath;
 @end
 
 @interface YKSegTableView : UIView
