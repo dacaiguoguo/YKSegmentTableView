@@ -9,7 +9,7 @@
 #import "YKViewController.h"
 #import "YKSegmentView.h"
 #import "YKSegTableView.h"
-@interface YKViewController ()<YKSegTableViewDataSource,YKSegTableViewDelegate>
+@interface YKViewController ()<YKSegTableViewDataSource,YKSegTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) YKSegmentView *segView;
 @property (strong, nonatomic) YKSegTableView *seg ;
 @end
@@ -57,7 +57,7 @@
 - (NSArray*)itemsForColom:(int)_colom{
     NSMutableArray *data = [NSMutableArray new];
     for (int i=0; i< 12; i++) {
-        [data addObject:[NSString stringWithFormat:@"%d:%d", i, _colom]];
+        [data addObject:[NSString stringWithFormat:@"登山服:%d",i]];
     }
     return data;
 }
@@ -71,7 +71,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.seg = [[YKSegTableView alloc] initWithFrame:CGRectMake(0, 108, 320, 548-108) andDataSource:self andDelegate:self];
+    self.seg = [[YKSegTableView alloc] initWithFrame:CGRectMake(0, 88, 320, 548-88) andDataSource:self andDelegate:self];
+    _seg.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:_seg];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -85,6 +86,11 @@
     return 1;
 }
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (tableView==self.searchDisplayController.searchResultsTableView) {
+        
+    }else{
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
     return 0;
 }
 
@@ -100,6 +106,24 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
     return cell;
 }
+#pragma mark -
+#pragma mark UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

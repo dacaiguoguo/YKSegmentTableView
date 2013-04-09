@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YKViewController : UIViewController
+@interface YKViewController : UIViewController<UISearchDisplayDelegate,UISearchBarDelegate>
 
 @end

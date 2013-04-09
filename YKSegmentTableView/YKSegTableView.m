@@ -66,8 +66,9 @@
         _interTable.dataSource = self;
         _interTable.delegate = self;
         _interTable.backgroundView = nil;
-        _interTable.backgroundColor = [UIColor clearColor];
+        _interTable.backgroundColor = [UIColor orangeColor];
         _interTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _interTable.tableFooterView = [_dataSource buttomView];
         [self addSubview:_interTable];
     }
     return _interTable;
@@ -83,9 +84,9 @@
     return 1;
 }
 
-- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [self.dataSource buttomView];
-}
+//- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+//    return [self.dataSource buttomView];
+//}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.delegate didSelectIndex:indexPath];
 }
@@ -93,9 +94,9 @@
     return [self.dataSource itemsForColom:[self.dataSource showWhichOne]].count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return [self.dataSource heightForFooterView];
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return [self.dataSource heightForFooterView];
+//}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *idfi = @"YKTableViewCellForGategory";
@@ -103,10 +104,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idfi];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:idfi];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:idfi];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
-    cell.detailTextLabel.text = [self.dataSource itemsForColom:[self.dataSource showWhichOne]][indexPath.row];
+    cell.textLabel.text = [self.dataSource itemsForColom:[self.dataSource showWhichOne]][indexPath.row];
+
     return cell;
 }
 // Only override drawRect: if you perform custom drawing.
