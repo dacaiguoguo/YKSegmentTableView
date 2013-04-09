@@ -30,6 +30,7 @@
 		596427631712B205003EE447 /* btn_right_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5964275F1712B205003EE447 /* btn_right_selected.png */; };
 		596427661712B5DA003EE447 /* YKSegTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596427651712B5DA003EE447 /* YKSegTableView.m */; };
 		59BF6F751712FAAE008D09CA /* YKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BF6F741712FAAD008D09CA /* YKColor.m */; };
+		59BF6F7F1713AB8C008D09CA /* YKBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BF6F7E1713AB8C008D09CA /* YKBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		596427651712B5DA003EE447 /* YKSegTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSegTableView.m; sourceTree = "<group>"; };
 		59BF6F731712FAAD008D09CA /* YKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKColor.h; sourceTree = "<group>"; };
 		59BF6F741712FAAD008D09CA /* YKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKColor.m; sourceTree = "<group>"; };
+		59BF6F7D1713AB8C008D09CA /* YKBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKBaseModel.h; sourceTree = "<group>"; };
+		59BF6F7E1713AB8C008D09CA /* YKBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKBaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				5964272E1712AEA2003EE447 /* YKAppDelegate.m */,
 				596427361712AEA2003EE447 /* YKViewController.h */,
 				596427371712AEA2003EE447 /* YKViewController.m */,
+				59BF6F7D1713AB8C008D09CA /* YKBaseModel.h */,
+				59BF6F7E1713AB8C008D09CA /* YKBaseModel.m */,
 				596427641712B5DA003EE447 /* YKSegTableView.h */,
 				596427651712B5DA003EE447 /* YKSegTableView.m */,
 				596427591712AEE2003EE447 /* YKSegmentView.h */,
@@ -308,6 +313,7 @@
 				5964275B1712AEE2003EE447 /* YKSegmentView.m in Sources */,
 				596427661712B5DA003EE447 /* YKSegTableView.m in Sources */,
 				59BF6F751712FAAE008D09CA /* YKColor.m in Sources */,
+				59BF6F7F1713AB8C008D09CA /* YKBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
