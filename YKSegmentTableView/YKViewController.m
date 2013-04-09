@@ -12,12 +12,14 @@
 @interface YKViewController ()<YKSegTableViewDataSource,YKSegTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) YKSegmentView *segView;
 @property (strong, nonatomic) YKSegTableView *seg ;
+@property (strong, nonatomic) UIView *headerView;
+
 @end
 
 @implementation YKViewController
 
 - (void)didSelectIndex:(NSIndexPath*)_indexPath{
-    
+    NSLog(@"segView:%d",_indexPath.row);
 }
 - (int)numberOfColoms{
     return 2;
@@ -30,15 +32,16 @@
     ret = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [clearButton setFrame:CGRectInset(ret.bounds, 10, 8)];
-    [clearButton setBackgroundColor:[UIColor orangeColor]];
+    [clearButton setBackgroundColor:[UIColor purpleColor]];
     [clearButton setTitle:@"清空历史记录" forState:UIControlStateNormal];
     [ret addSubview:clearButton];
     return ret;
 }
 - (UIView *)segmentView{
 //    return nil;
-    if (!_segView) {
-        self.segView =  [[YKSegmentView alloc] initWithFrame:CGRectMake(34, 0, 252, 39)
+    if (!_headerView) {
+        self.headerView =[[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 39+18)];
+        self.segView =  [[YKSegmentView alloc] initWithFrame:CGRectMake(34, 18, 252, 39)
                                                 buttonNumber:2
                                                 normalImages:@[@"btn_left_normal.png",@"btn_right_normal.png"]
                                                 selectImages:@[@"btn_left_selected.png",@"btn_right_selected.png"]
@@ -46,10 +49,11 @@
                                             normalTitleColor:[YKColor getColor:@"707070"] selectColor:[UIColor whiteColor]
                                                  selectIndex:0];
         [_segView addTarget:self action:@selector(reloadDataSeg:) forControlEvents:UIControlEventValueChanged];
+        [self.headerView addSubview:_segView];
 
 
     }
-    return _segView;
+    return _headerView;
 }
 - (int)showWhichOne{
     return _segView.selectedIndex;
@@ -80,18 +84,14 @@
     return 40;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 70;
+    return 0;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (tableView==self.searchDisplayController.searchResultsTableView) {
-        
-    }else{
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    }
-    return 0;
+
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

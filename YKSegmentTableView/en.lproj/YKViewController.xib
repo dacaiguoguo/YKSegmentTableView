@@ -50,7 +50,7 @@
 						<array key="IBUIItems">
 							<object class="IBUINavigationItem" id="781419165">
 								<reference key="IBUINavigationBar" ref="28363089"/>
-								<string key="IBUITitle">Title</string>
+								<string key="IBUITitle">搜索</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
